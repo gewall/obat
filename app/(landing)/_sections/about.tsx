@@ -25,7 +25,7 @@ const About = () => {
           <div className="flex-1 ">
             <Typograph variant="Sub-Header">
               <span className="border-l-4 border-sky-400 mr-2" />
-              Let's Be Friend!
+              Let&apos;s Be Friend!
             </Typograph>
             <Typograph variant="Text" className="my-4">
               You can find me on these social media.
