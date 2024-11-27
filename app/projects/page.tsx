@@ -3,13 +3,10 @@ import React from "react";
 import PageLayout from "../(landing)/_components/PageLayout";
 import Typograph from "@/components/ui/typograph";
 import SectionsLayout from "../(landing)/_components/SectionsLayout";
-import Image from "next/image";
+
 import { Metadata } from "next";
-import { cn } from "@/lib/utils";
-import { raleway } from "@/lib/fonts";
-import Link from "next/link";
+
 import ProjectList from "./_sections/project-list";
-import { GetAllProjects } from "@/lib/api/projects";
 
 export const metadata: Metadata = {
   title: "Projects | Algi Nugraha",

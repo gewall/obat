@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 import Me from "@/assets/me.png";
-import { AnimatePresence, delay, motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 
 type Props = {};
 

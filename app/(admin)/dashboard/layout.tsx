@@ -1,10 +1,6 @@
 import React, { ReactNode } from "react";
 import Sidebar from "./_components/Sidebar";
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import Navbar from "./_components/Navbar";
 
 type Props = {

@@ -1,6 +1,6 @@
 import React from "react";
 import Card, { CardProps } from "../_components/Card";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
 
 type Props = {
   projects?: CardProps[];

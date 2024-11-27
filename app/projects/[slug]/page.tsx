@@ -5,7 +5,6 @@ import { Metadata } from "next";
 import React from "react";
 import Cover from "./_sections/cover";
 import Description from "./_sections/description";
-import { GetAllProjects } from "@/lib/api/projects";
 
 export const metadata: Metadata = {
   title: "Project | Algi Nugraha",
