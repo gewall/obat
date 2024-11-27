@@ -3,9 +3,7 @@ import FormLogin from "../_components/Form-Login";
 import Typograph from "@/components/ui/typograph";
 import { Separator } from "@/components/ui/separator";
 
-type Props = {};
-
-const SignIn = (props: Props) => {
+const SignIn = () => {
   return (
     <div className="w-screen h-screen flex justify-center items-center ">
       <div className="p-2 border-2 border-zinc-200 ">

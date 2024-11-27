@@ -6,10 +6,10 @@ import * as motion from "motion/react-client";
 
 export type CardProps = {
   title: string;
-  slug: String;
+  slug: string;
   cover_url: string;
-  description?: String;
-  classification?: String;
+  description?: string;
+  classification?: string;
 };
 
 const Card = ({

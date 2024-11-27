@@ -8,9 +8,7 @@ import React from "react";
 import Me from "@/assets/me.png";
 import { AnimatePresence, motion } from "motion/react";
 
-type Props = {};
-
-const Hero = (props: Props) => {
+const Hero = () => {
   const router = useRouter();
   return (
     <AnimatePresence>

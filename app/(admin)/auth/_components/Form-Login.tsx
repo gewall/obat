@@ -2,9 +2,7 @@ import { Button } from "@/components/ui/button";
 import { signIn } from "@/lib/api/handler";
 import React from "react";
 
-type Props = {};
-
-const FormLogin = (props: Props) => {
+const FormLogin = () => {
   return (
     <form
       action={async () => {

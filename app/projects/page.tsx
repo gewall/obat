@@ -1,4 +1,3 @@
-import Navbar from "@/components/ui/navbar";
 import React from "react";
 import PageLayout from "../(landing)/_components/PageLayout";
 import Typograph from "@/components/ui/typograph";
@@ -13,9 +12,7 @@ export const metadata: Metadata = {
   description: "Portofolio Algi Nugraha",
 };
 
-type Props = {};
-
-const Projects = async (props: Props) => {
+const Projects = async () => {
   return (
     <PageLayout>
       <SectionsLayout className="mt-24 md:flex-col md:items-baseline flex-col">

@@ -1,7 +1,7 @@
 // components/Footer.js
 import Link from "next/link";
-type Props = {};
-const Footer = (props: Props) => {
+
+const Footer = () => {
   return (
     <footer className="bg-slate-800 text-white py-6">
       <div className="container mx-auto px-8">

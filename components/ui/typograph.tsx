@@ -22,7 +22,7 @@ const TextVariant = cva("scroll-m-20 tracking-tight", {
   },
 });
 
-const TextComp: any = {
+const TextComp = {
   Header: "h1",
   "Sub-Header": "h5",
   Text: "p",

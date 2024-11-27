@@ -13,8 +13,6 @@ import {
 } from "@/components/ui/sidebar";
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 
-type Props = {};
-
 const items = [
   {
     title: "Home",
@@ -43,7 +41,7 @@ const items = [
   },
 ];
 
-const Sidebar = (props: Props) => {
+const Sidebar = () => {
   return (
     <ShadSidebar variant="floating">
       <SidebarHeader />

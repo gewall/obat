@@ -3,9 +3,7 @@ import SectionsLayout from "../_components/SectionsLayout";
 import Typograph from "@/components/ui/typograph";
 import Link from "next/link";
 
-type Props = {};
-
-const About = (props: Props) => {
+const About = () => {
   return (
     <SectionsLayout id="about" className="my-12 md:my-24">
       <div className="flex-1">
