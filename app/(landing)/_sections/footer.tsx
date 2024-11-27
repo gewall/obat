@@ -12,7 +12,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">About Me</h3>
             <p className="text-sm text-gray-300">
               We are committed to providing the best services and solutions for
-              your needs. Let's grow together!
+              your needs. Let&apos;s grow together!
             </p>
           </div>
 

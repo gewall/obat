@@ -13,13 +13,13 @@ const About = () => {
         <div className="flex md:flex-row flex-col gap-6 md:gap-24">
           <div className="flex-1 text-justify">
             <Typograph variant="Text" className="my-4">
-              Hi, I’m <span className="font-semibold">Algi Nugraha</span>, an
-              Informatics student at Universitas Majalengka and a passionate
+              Hi, I&apos;m <span className="font-semibold">Algi Nugraha</span>,
+              an Informatics student at Universitas Majalengka and a passionate
               <span className="font-semibold"> Game Developer</span>. After
               starting my career as a freelance web and mobile programmer, I
-              found my true calling in creating immersive games. I’m dedicated
-              to crafting engaging gameplay and compelling stories that bring
-              joy to players worldwide.
+              found my true calling in creating immersive games. I&apos;m
+              dedicated to crafting engaging gameplay and compelling stories
+              that bring joy to players worldwide.
             </Typograph>
           </div>
           <div className="flex-1 ">

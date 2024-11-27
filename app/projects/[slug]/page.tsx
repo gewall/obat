@@ -16,9 +16,7 @@ export type IImage = {
   alt: string;
 };
 
-type Props = {};
-
-const Project = async (props: Props) => {
+const Project = async () => {
   return (
     <PageLayout>
       <Cover src="https://picsum.photos/1920/1080" alt="" />
