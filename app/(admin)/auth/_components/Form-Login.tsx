@@ -1,5 +1,6 @@
+import { signIn } from "@/auth";
 import { Button } from "@/components/ui/button";
-import { signIn } from "@/lib/api/handler";
+
 import React from "react";
 
 const FormLogin = () => {
