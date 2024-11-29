@@ -1,9 +1,8 @@
-import React from "react";
-import Card, { CardProps } from "../_components/Card";
+"use client";
 
-type Props = {
-  projects?: CardProps[];
-};
+import React, { useEffect, useState } from "react";
+import Card, { CardProps } from "../_components/Card";
+import { GetAllProjects } from "@/lib/api/projects";
 
 // type Project = {
 //   nama: string;
@@ -12,11 +11,25 @@ type Props = {
 //   type?: String;
 // };
 
-const ProjectList = ({ projects }: Props) => {
+const ProjectList = () => {
+  const [data, setData] = useState<CardProps[]>();
+
+  useEffect(() => {
+    const fetch = async () => {
+      const _ = await GetAllProjects();
+      setData(_.data);
+    };
+
+    fetch();
+  }, [GetAllProjects]);
+  if (!data) return <div>Loading...</div>;
+
+  console.log(data);
+
   return (
     <div className="flex flex-col md:flex-row justify-start w-full gap-4">
-      {projects?.map((_, index) => (
-        <Card key={index} {..._} />
+      {data.map((_, i) => (
+        <Card key={i} {...(_ as CardProps)} />
       ))}
     </div>
   );

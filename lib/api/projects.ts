@@ -46,9 +46,11 @@ export const AddProjectAPI = async(data: z.infer<typeof projectSchema>) => {
 
 export const GetAllProjects = async() => {
     try {
-        const res = await instance.get("/project")        
+        const res = await instance.get("/project")    
+        console.log(res,"API");
+            
         return res.data;
     } catch (error) {
-        return{data:{error}}
+        return {data:{error}}
     }
 }
