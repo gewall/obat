@@ -1,7 +1,7 @@
 
 import { supabase } from '@/lib/supabse';
 import { randomUUID } from 'crypto';
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest } from 'next/server'
 
 
 

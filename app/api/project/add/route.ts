@@ -1,7 +1,7 @@
 
 import { supabase } from '@/lib/supabse';
 import { Project } from '@/lib/types/project.type';
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest } from 'next/server'
 
 export const POST = async(request:NextRequest)=> {
     const body = await request.json() as Project;

@@ -15,20 +15,18 @@ export const metadata: Metadata = {
 
 const Projects = async () => {
   const data = await GetAllProjects();
-
-  console.log(data);
-
+  // const data = { data: [] };
   return (
     <PageLayout>
       <SectionsLayout className="mt-24 md:flex-col md:items-baseline flex-col">
         <Typograph variant="Sub-Header" className="text-sky-400 mb-4">
           My Projects
         </Typograph>
-
-        <ProjectList projects={data.data} />
+        {!data ? <div>Loading...</div> : <ProjectList projects={data.data} />}
       </SectionsLayout>
     </PageLayout>
   );
 };
+export const dynamic = "force-dynamic";
 
 export default Projects;

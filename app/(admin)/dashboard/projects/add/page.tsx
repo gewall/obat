@@ -7,7 +7,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -26,7 +25,6 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import SectionLayout from "../../_components/SectionLayout";
 import { AddProjectAPI } from "@/lib/api/projects";
-import { Project } from "@/lib/types/project.type";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
 
@@ -50,11 +48,6 @@ const AddProject = () => {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
-    const cover = new FormData();
-    cover.append("cover_url", values.cover_url);
-    const data = {
-      ...values,
-    };
 
     const res = await AddProjectAPI(values);
     console.log(res);

@@ -16,7 +16,7 @@ const ProjectList = ({ projects }: Props) => {
   return (
     <div className="flex flex-col md:flex-row justify-start w-full gap-4">
       {projects?.map((_, index) => (
-        <Card key={index} {..._}></Card>
+        <Card key={index} {..._} />
       ))}
     </div>
   );

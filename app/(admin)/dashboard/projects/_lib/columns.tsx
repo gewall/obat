@@ -4,7 +4,6 @@ import { Project } from "@/lib/types/project.type";
 import { ColumnDef } from "@tanstack/react-table";
 import {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,

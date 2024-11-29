@@ -1,9 +1,8 @@
 import { z } from "zod";
-import { Project } from "../types/project.type";
 import { instance } from "./instance"
 import { projectSchema } from "@/app/(admin)/dashboard/projects/_lib/scheme";
 
-const uploadAllImages = async (images:any) => {
+const uploadAllImages = async (images:FileList) => {
     const uploadedImages = await Promise.all(
         Array.from(images).map(async (image) => {
             const upload_images = await instance.post("/project/upload", { image });
@@ -40,7 +39,7 @@ export const AddProjectAPI = async(data: z.infer<typeof projectSchema>) => {
         const res = await instance.post("/project/add",JSON.stringify(_data));
         return res;
     } catch (error) {
-        throw new Error("Add Project Fail"+error);
+       return{data:{error}}
     }
 }
 
@@ -50,6 +49,6 @@ export const GetAllProjects = async() => {
         const res = await instance.get("/project")        
         return res.data;
     } catch (error) {
-         throw new Error("Add Project Fail"+error);
+        return{data:{error}}
     }
 }
