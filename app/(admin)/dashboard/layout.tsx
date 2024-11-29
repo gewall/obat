@@ -13,7 +13,7 @@ const Layout = ({ children }: Props) => {
       {/* Include shared UI here e.g. a header or sidebar */}
       <Sidebar />
       {/* <SidebarTrigger /> */}
-      <div className="flex flex-col w-full mx-4">
+      <div className="flex flex-col w-full mx-4 relative">
         <Navbar />
         <main>{children}</main>
       </div>

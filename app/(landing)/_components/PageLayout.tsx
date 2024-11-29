@@ -12,7 +12,7 @@ const PageLayout = (props: Props) => {
       <Navbar
         menus={[
           { name: "Home", uri: "/" },
-          { name: "About", uri: "/about" },
+
           { name: "Projects", uri: "/projects" },
         ]}
       />

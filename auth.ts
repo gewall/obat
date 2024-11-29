@@ -12,6 +12,14 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     secret:process.env.SUPABASE_SERVICE_ROLE_KEY as string,
     url:process.env.SUPABASE_URL as string
   }),
-  debug:true
+  debug:true,
+  pages:{
+    signIn:"/auth/signin"
+  },
+  callbacks: {
+    authorized: async ({ auth }) => {
+      // Logged in users are authenticated, otherwise redirect to login page
+      return !!auth
+    },}
 })
 

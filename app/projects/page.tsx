@@ -6,6 +6,7 @@ import SectionsLayout from "../(landing)/_components/SectionsLayout";
 import { Metadata } from "next";
 
 import ProjectList from "./_sections/project-list";
+import { GetAllProjects } from "@/lib/api/projects";
 
 export const metadata: Metadata = {
   title: "Projects | Algi Nugraha",
@@ -13,6 +14,10 @@ export const metadata: Metadata = {
 };
 
 const Projects = async () => {
+  const data = await GetAllProjects();
+
+  console.log(data);
+
   return (
     <PageLayout>
       <SectionsLayout className="mt-24 md:flex-col md:items-baseline flex-col">
@@ -20,17 +25,7 @@ const Projects = async () => {
           My Projects
         </Typograph>
 
-        <ProjectList
-          projects={[
-            {
-              cover_url: "https://picsum.photos/1920/1080",
-              slug: "my-game",
-              title: "Pena",
-              classification: "Game",
-              description: "lorem",
-            },
-          ]}
-        />
+        <ProjectList projects={data.data} />
       </SectionsLayout>
     </PageLayout>
   );

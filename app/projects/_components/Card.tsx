@@ -25,9 +25,9 @@ const Card = ({
       animate={{ x: 0 }}
       transition={{ duration: 0.3, ease: "backInOut" }}
     >
-      <div className="border-2 border-slate-200 px-2 py-2">
+      <div className="border-2 border-slate-200 px-2 py-2 max-w-64">
         <Image
-          src={cover_url}
+          src={`https://qgxwsaucjynripudbgtz.supabase.co/storage/v1/object/public/${cover_url}`}
           alt={title}
           width={250}
           height={250}
@@ -40,7 +40,9 @@ const Card = ({
           >
             {title}
           </Link>
-          <Typograph variant="Text">{description}</Typograph>
+          <Typograph variant="Text" className="">
+            {description?.slice(0, 90)}...
+          </Typograph>
           <Typograph variant="Text" className="text-sm text-zinc-500">
             {classification}
           </Typograph>

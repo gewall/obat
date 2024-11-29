@@ -1,8 +1,10 @@
 import axios from "axios"
 
 export const instance = axios.create({
-    baseURL:"https://itch.io/api/1/key/",
+    baseURL:`http://localhost:3000/api/`,
     headers:{
-        Authorization:"Bearer "+process.env.ITCHIO_API_KEY
+     
+        'Content-Type': 'multipart/form-data'
+       
     }
 })
