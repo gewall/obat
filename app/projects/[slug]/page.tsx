@@ -52,7 +52,7 @@ const Project = async ({ params }: { params: Params }) => {
         download_link={data.download_link}
         title={data.title}
         classification={data.classification}
-        images={data.images.split(",")}
+        images={data.images?.split(",")}
         cover_url={data.cover_url}
         slug={data.slug}
       />
