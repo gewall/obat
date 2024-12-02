@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  staticPageGenerationTimeout: 180
 };
 
 export default nextConfig;
