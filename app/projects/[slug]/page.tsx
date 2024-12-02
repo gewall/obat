@@ -20,20 +20,22 @@ type Params = Promise<{ slug: string }>;
 
 export const revalidate = 3600;
 export async function generateStaticParams() {
-  const { data } = (await GetAllProjects()) || [];
+  const data = await GetAllProjects();
+  const _data = data.data as iProject[];
   // console.log(data);
   console.log(data, "Meta");
 
-  return data?.map((_: iProject) => ({ slug: _.slug }));
+  return _data.map((_: iProject) => ({ slug: _.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Params }) {
   const { slug } = await params;
-  const post = await GetProjectBySlug(slug);
+  const data = await GetProjectBySlug(slug);
+  const { title } = data.data as iProject;
   // console.log(post, "title");
 
   return {
-    title: post.data.title + " | Algi Nugraha",
+    title: title + " | Algi Nugraha",
   };
 }
 
