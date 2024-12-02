@@ -10,7 +10,7 @@ import { Project as iProject } from "@/lib/types/project.type";
 //   title: "Project | Algi Nugraha",
 //   description: "Portofolio Algi Nugraha",
 // };
-
+export const dynamic = "force-static";
 export type IImage = {
   src: string;
   alt: string;
@@ -23,7 +23,6 @@ export async function generateStaticParams() {
   const data = await GetAllProjects();
   const _data = data.data as iProject[];
   // console.log(data);
-  console.log(data, "Meta");
 
   return _data.map((_: iProject) => ({ slug: _.slug }));
 }
