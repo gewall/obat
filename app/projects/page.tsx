@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "Portofolio Algi Nugraha",
 };
 
-export const revalidate = 3600;
+// export const revalidate = 3600;
 // export async function generateStaticParams() {
 //   const data = await GetAllProjects();
 //   console.log(data, "PARAM");

@@ -32,9 +32,10 @@ const About = () => {
             </Typograph>
             <div className="flex gap-2">
               <Link
-                href="https://twitter.com"
+                href="https://twitter.com/@GewallArt"
                 aria-label="Twitter"
                 className="hover:text-sky-400"
+                target="_bkank"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -46,9 +47,10 @@ const About = () => {
                 </svg>
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/gingrham"
                 aria-label="Instagram"
                 className="hover:text-sky-400"
+                target="_blank"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

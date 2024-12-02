@@ -11,13 +11,13 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">About Me</h3>
             <p className="text-sm text-gray-300">
-              We are committed to providing the best services and solutions for
+              I am committed to providing the best service and solutions for
               your needs. Let&apos;s grow together!
             </p>
           </div>
 
           {/* Section 2: Links */}
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
@@ -41,13 +41,13 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Section 3: Social Media */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Follow Me</h3>
             <div className="flex space-x-4">
-              <Link
+              {/* <Link
                 href="https://facebook.com"
                 aria-label="Facebook"
                 className="hover:text-blue-400"
@@ -60,11 +60,12 @@ const Footer = () => {
                 >
                   <path d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.325v21.351c0 .732.592 1.324 1.325 1.324h11.495v-9.294h-3.125v-3.622h3.125v-2.671c0-3.1 1.894-4.788 4.658-4.788 1.325 0 2.464.099 2.794.143v3.242l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.31h3.587l-.467 3.622h-3.12v9.293h6.105c.732 0 1.324-.592 1.324-1.324v-21.35c0-.733-.592-1.325-1.324-1.325z" />
                 </svg>
-              </Link>
+              </Link> */}
               <Link
-                href="https://twitter.com"
+                href="https://twitter.com/@GewallArt"
                 aria-label="Twitter"
                 className="hover:text-blue-400"
+                target="_blank"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -76,9 +77,10 @@ const Footer = () => {
                 </svg>
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/gingrha"
                 aria-label="Instagram"
                 className="hover:text-blue-400"
+                target="_blank"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

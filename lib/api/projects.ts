@@ -34,7 +34,7 @@ export const AddProjectAPI = async(data: z.infer<typeof projectSchema>) => {
         const _data = {
             ...data, cover_url: _cover_url,images:uploadedPaths
         }
-        console.log(_data);
+      
         
         const res = await instance.post("/project/add",JSON.stringify(_data));
         return res;
@@ -47,10 +47,20 @@ export const AddProjectAPI = async(data: z.infer<typeof projectSchema>) => {
 export const GetAllProjects = async() => {
     try {
         const res = await instance.get("/project")    
-        console.log(res,"API");
-            
+        
         return res.data;
     } catch (error) {
+        return {data:{error}}
+    }
+}
+
+export const GetProjectBySlug = async(slug:string) => {
+    try{
+        const res = await instance.get(`/project/${slug}`)
+        console.log(res.data,"EAAA");
+        
+        return res.data;
+    }catch(error){
         return {data:{error}}
     }
 }

@@ -68,7 +68,12 @@ const Navbar = ({ menus }: Props) => {
             </svg>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="bg-white border border-gray-200 rounded-md mt-2 p-2 w-full">
-            <DropdownMenuItem className="w-full">
+            {menus.map((item, _) => (
+              <DropdownMenuItem className="w-full" key={_}>
+                <NavLink {...item} />
+              </DropdownMenuItem>
+            ))}
+            {/* <DropdownMenuItem className="w-full">
               <a
                 href="#"
                 className="block text-gray-700 hover:text-sky-500 w-full"
@@ -99,7 +104,7 @@ const Navbar = ({ menus }: Props) => {
               >
                 Contact
               </a>
-            </DropdownMenuItem>
+            </DropdownMenuItem> */}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
