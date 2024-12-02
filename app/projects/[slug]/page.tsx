@@ -14,9 +14,7 @@ export type IImage = {
 };
 
 // Tipe params diperbaiki
-type Params = {
-  slug: string;
-};
+type Params = Promise<{ slug: string }>;
 
 // Fungsi untuk menghasilkan parameter dinamis
 export async function generateStaticParams() {
@@ -27,7 +25,7 @@ export async function generateStaticParams() {
 
 // Metadata dinamis berdasarkan slug
 export async function generateMetadata({ params }: { params: Params }) {
-  const { slug } = params;
+  const { slug } = await params;
   const response = await GetProjectBySlug(slug);
   const project = response.data as iProject;
 
@@ -38,7 +36,7 @@ export async function generateMetadata({ params }: { params: Params }) {
 
 // Komponen Halaman Project
 const Project = async ({ params }: { params: Params }) => {
-  const { slug } = params;
+  const { slug } = await params;
   const response = await GetProjectBySlug(slug);
   const project = response.data;
 
