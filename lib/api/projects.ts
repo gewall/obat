@@ -50,7 +50,7 @@ export const GetAllProjects = async() => {
         
         return res.data;
     } catch (error) {
-        return {data:{error}}
+        return {data:[],error:{error}}
     }
 }
 
