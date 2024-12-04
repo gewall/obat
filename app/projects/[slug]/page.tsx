@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Params }) {
   const project = response.data as iProject;
 
   return {
-    title: `${project.title} | Algi Nugraha`,
+    title: `${project.title || ""} | Algi Nugraha`,
   };
 }
 

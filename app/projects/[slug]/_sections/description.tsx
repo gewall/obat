@@ -73,7 +73,7 @@ const Description = ({
         </Carousel>
 
         <Button asChild className="bg-sky-400 hover:bg-sky-500">
-          <Link href={download_link as string} target="_blank">
+          <Link href={`${download_link}`} target="_blank">
             Download Here!
           </Link>
         </Button>
