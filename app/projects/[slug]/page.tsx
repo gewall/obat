@@ -1,5 +1,5 @@
 import PageLayout from "@/app/(landing)/_components/PageLayout";
-import React from "react";
+import React, { Fragment } from "react";
 import Cover from "./_sections/cover";
 import Description from "./_sections/description";
 import { GetAllProjects, GetProjectBySlug } from "@/lib/api/projects";
@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 
 // Metadata dinamis berdasarkan slug
 export async function generateMetadata({ params }: { params: Params }) {
-  const { slug } = await params;
+  const { slug = "" } = await params;
   const response = await GetProjectBySlug(slug);
   const project = response.data as iProject;
 
@@ -36,22 +36,28 @@ export async function generateMetadata({ params }: { params: Params }) {
 
 // Komponen Halaman Project
 const Project = async ({ params }: { params: Params }) => {
-  const { slug } = await params;
+  const { slug = "" } = await params;
   const response = await GetProjectBySlug(slug);
   const project = response.data;
 
   return (
     <PageLayout>
-      <Cover src={project.cover_url} alt={project.slug} />
-      <Description
-        description={project.description}
-        download_link={project.download_link}
-        title={project.title}
-        classification={project.classification}
-        images={project.images ? (project.images?.split(",") as []) : []} // Handle jika null
-        cover_url={project.cover_url}
-        slug={project.slug}
-      />
+      {project ? (
+        <Fragment>
+          <Cover src={project.cover_url} alt={project.slug} />
+          <Description
+            description={project.description}
+            download_link={project.download_link}
+            title={project.title}
+            classification={project.classification}
+            images={project.images ? (project.images?.split(",") as []) : []} // Handle jika null
+            cover_url={project.cover_url}
+            slug={project.slug}
+          />
+        </Fragment>
+      ) : (
+        <div>Loading...</div>
+      )}
     </PageLayout>
   );
 };
