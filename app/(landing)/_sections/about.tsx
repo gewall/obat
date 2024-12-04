@@ -47,7 +47,7 @@ const About = () => {
                 </svg>
               </Link>
               <Link
-                href="https://www.instagram.com/gingrham"
+                href="https://www.instagram.com/gingrha"
                 aria-label="Instagram"
                 className="hover:text-sky-400"
                 target="_blank"
