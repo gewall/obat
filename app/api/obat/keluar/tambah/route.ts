@@ -24,11 +24,20 @@ export async function POST(request: Request) {
     data.forEach(async (_:any)=>{
         const obat = await prisma.obat.findFirst({where:{id:_.id}})
 
+ 
+
         if (!obat) {
             return new Response(
               JSON.stringify({ msg: "Error processing obat" }),
               { status: 400, headers: { "Content-Type": "application/json" } }
             );
+        }
+
+        if(obat?.kuantiti <= _.kuantiti ){
+          return new Response(
+            JSON.stringify({ msg: "Error stock" }),
+            { status: 400, headers: { "Content-Type": "application/json" } }
+          );
         }
         
         const updateObat = await prisma.obat.update({

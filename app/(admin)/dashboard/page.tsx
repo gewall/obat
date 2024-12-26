@@ -51,7 +51,7 @@ const Dashboard = () => {
       const obat = await fetch(`/api/obat/keluar`);
       const obatRes = await obat.json();
       const _obat = obatRes.count
-        ?.sort((a: any, b: any) => a._sum.kuantiti - b._sum.kuantiti)
+        ?.sort((a: any, b: any) => a._sum.kuantiti + b._sum.kuantiti)
         .map((_: any) => ({
           nama: _.nama,
           kuantiti: _._sum.kuantiti,
@@ -79,7 +79,7 @@ const Dashboard = () => {
             Obat dengan stok minimum
           </Typograph>
           <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
-            <BarChart accessibilityLayer data={stokObat}>
+            <BarChart accessibilityLayer data={stokObat.slice(0, 5)}>
               <CartesianGrid vertical={false} />
               <XAxis
                 dataKey="nama"
@@ -100,7 +100,7 @@ const Dashboard = () => {
             Obat paling diminati
           </Typograph>
           <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
-            <BarChart accessibilityLayer data={topObat}>
+            <BarChart accessibilityLayer data={topObat.slice(0, 5)}>
               <CartesianGrid vertical={false} />
               <XAxis
                 dataKey="nama"

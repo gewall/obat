@@ -13,7 +13,7 @@ export const obatScheme = z.object({
   id:z.string(),
   idtransaksi:z.string(),
   nama:z.string(),
-  satuan:z.enum(["Tablet", "Ampul", "botol", "Fles","Pcs"]),
+  satuan:z.enum(["Tablet", "Ampul", "Botol", "Fles","Pcs"]),
   kuantiti:z.coerce.number(),
 })
 

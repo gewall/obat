@@ -386,7 +386,7 @@ const TambahKeluar = () => {
                           idtransaksi: "",
                           kuantiti: 0,
                           nama: _.nama,
-                          satuan: "Ampul",
+                          satuan: _.satuan,
                         })
                       }
                     >
