@@ -27,6 +27,9 @@ import {
   User2,
 } from "lucide-react";
 import Link from "next/link";
+import Typograph from "@/components/ui/typograph";
+import Image from "next/image";
+import logo from "@/assets/logo.jpg";
 
 const items = [
   {
@@ -59,10 +62,15 @@ const items = [
 const Sidebar = () => {
   return (
     <ShadSidebar variant="floating">
-      <SidebarHeader />
+      <SidebarHeader>
+        <div className="flex gap-2 items-center">
+          <Image src={logo} alt="icon" width={50} height={50} />
+          <Typograph variant="Sub-Header">Klinik Guvili</Typograph>
+        </div>
+      </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>Menu</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {/* {items.map((item) => (
