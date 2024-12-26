@@ -1,7 +1,7 @@
 import React from "react";
-import PageLayout from "../(landing)/_components/PageLayout";
+import PageLayout from "../Delete/_components/PageLayout";
 import Typograph from "@/components/ui/typograph";
-import SectionsLayout from "../(landing)/_components/SectionsLayout";
+import SectionsLayout from "../Delete/_components/SectionsLayout";
 
 import { Metadata } from "next";
 

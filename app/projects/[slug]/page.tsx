@@ -1,4 +1,4 @@
-import PageLayout from "@/app/(landing)/_components/PageLayout";
+import PageLayout from "@/app/Delete/_components/PageLayout";
 import React, { Fragment } from "react";
 import Cover from "./_sections/cover";
 import Description from "./_sections/description";

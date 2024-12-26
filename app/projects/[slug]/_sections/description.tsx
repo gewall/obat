@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import SectionsLayout from "@/app/(landing)/_components/SectionsLayout";
+import SectionsLayout from "@/app/Delete/_components/SectionsLayout";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Typograph from "@/components/ui/typograph";

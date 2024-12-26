@@ -6,9 +6,9 @@ import { Separator } from "@/components/ui/separator";
 const SignIn = () => {
   return (
     <div className="w-screen h-screen flex justify-center items-center ">
-      <div className="p-2 border-2 border-zinc-200 ">
+      <div className="p-4 border-2 border-zinc-200 w-96">
         <Typograph variant="Header" className="text-center">
-          Login
+          LOGIN
         </Typograph>
         <Separator className="my-4" />
         <FormLogin />

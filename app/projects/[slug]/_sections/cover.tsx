@@ -1,4 +1,4 @@
-import SectionsLayout from "@/app/(landing)/_components/SectionsLayout";
+import SectionsLayout from "@/app/Delete/_components/SectionsLayout";
 import Image from "next/image";
 import React from "react";
 import { IImage } from "../page";

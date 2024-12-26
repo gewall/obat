@@ -38,7 +38,7 @@ const CustomBreadcrumb = () => {
         {_path.slice(1, _path.length).map((_, i) => (
           <Fragment key={i}>
             <BreadcrumbItem>
-              <BreadcrumbLink>
+              <BreadcrumbLink asChild>
                 <Link href={`/${_path.slice(1, i + 2).join("/")}`}>
                   {_.slice(0, 1).toUpperCase() + _.slice(1, _.length)}
                 </Link>
