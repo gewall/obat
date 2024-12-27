@@ -2,7 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-
+  async redirects() {
+    return [
+      // Basic redirect
+      {
+        source: '/',
+        destination: '/auth/signin',
+        permanent: true,
+      },]},
   images: {
     remotePatterns: [
       {

@@ -79,7 +79,7 @@ const SectionLayout = (props: Props) => {
       <div className="bg-slate-100   mt-4 bottom-0  p-4">
         <center>
           <Typograph variant="Text" className="text-slate-300">
-            Gewal 2024
+            Amel 2024
           </Typograph>
         </center>
       </div>
